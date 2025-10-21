@@ -1,4 +1,4 @@
-# Analyse-et-Classification-d-Images-chographiques-Mammaires-l-aide-du-Deep-Learning
+# Classification des types de consommation
   **Préparé et présenté par :** Saint Germain Emode / Darlens Damisca </br>
   **Email:** germodee12@gmail.com / bdamisca96@gmail.com
 
