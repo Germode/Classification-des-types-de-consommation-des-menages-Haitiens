@@ -34,3 +34,10 @@ Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et compr
 - Les transactions financières effectuées sur leurs compteurs.
   ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
 
+ # Analyse exploratoire des données (EDA)
+
+Une analyse exploratoire a été menée pour comprendre la structure du jeu de données.
+Elle a permis d’étudier la distribution des variables clés (consommation, ampérage, transactions) et d’identifier les corrélations entre les aspects énergétiques et financiers.
+Des visualisations statistiques (histogrammes, scatter plots, heatmaps) ont été utilisées pour détecter les tendances et les valeurs atypiques.
+  ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
+
