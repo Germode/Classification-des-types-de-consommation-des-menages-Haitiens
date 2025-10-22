@@ -32,4 +32,5 @@ Dans le cadre de ce projet, nous avons eu accès à un jeu de données privé fo
 Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et comprend notamment :
 - La consommation quotidienne de chaque client,
 - Les transactions financières effectuées sur leurs compteurs.
+  ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
 
