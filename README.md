@@ -28,6 +28,7 @@ Développer un **modèle d’apprentissage automatique (Machine Learning)** capa
  
  ## Description du jeu de données
 Dans le cadre de ce projet, nous avons eu accès à un jeu de données privé fourni par la société Sigora, contenant des informations détaillées sur les compteurs des clients situés dans plusieurs communes du Nord-Ouest d’Haïti, telles que Môle Saint-Nicolas, Jean Rabel, Bombardopolis et Môle Rouge.
+
 Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et comprend notamment :
 - La consommation quotidienne de chaque client,
 - Les transactions financières effectuées sur leurs compteurs.
