@@ -27,7 +27,8 @@ Développer un **modèle d’apprentissage automatique (Machine Learning)** capa
   - **Forte consommation** (> 0.5 kW)
  
  ## Description du jeu de données
-Le jeu de données privé utilisé dans ce projet contient des informations sur la consommation quotidienne d’électricité des ménages, ainsi que des données complémentaires sur leurs habitudes énergétiques.
-Ce jeu de données, couvrant la période de janvier 2023 à septembre 2025, permet d’analyser les profils réels de consommation et de développer un modèle d’intelligence artificielle capable de classifier les ménages en trois catégories :
-faible, moyenne et forte consommation.
+Dans le cadre de ce projet, nous avons eu accès à un jeu de données privé fourni par la société Sigora, contenant des informations détaillées sur les compteurs des clients situés dans plusieurs communes du Nord-Ouest d’Haïti, telles que Môle Saint-Nicolas, Jean Rabel, Bombardopolis et Môle Rouge.
+Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et comprend notamment :
+- La consommation quotidienne de chaque client,
+- Les transactions financières effectuées sur leurs compteurs.
 
