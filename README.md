@@ -43,3 +43,14 @@ Des visualisations statistiques (histogrammes, scatter plots, heatmaps) ont ét�
   ![Visualisation](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation.png)
   ![visalusation2](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation2.png)
 
+  ## Feature Engineering
+- **Agrégation journalière par foyer** : total et moyenne d’amperage, total et moyenne des dépenses, nombre d’enregistrements.
+- **Profil global par foyer** : moyennes sur la période, nombre de jours observés, ratios (ex : ratio dépense/amperage).
+- **Ajout des métadonnées** : zone, type de maison, nombre de personnes par foyer.
+
+
+## Préparation pour la modélisation
+- Sélection des features pertinentes.
+- Imputation des valeurs manquantes si nécessaire.
+- **Standardisation** des variables numériques.
+- **Split train/test** stratifié pour conserver la répartition des classes.
