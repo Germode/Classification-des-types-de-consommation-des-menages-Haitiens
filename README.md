@@ -32,6 +32,8 @@ Dans le cadre de ce projet, nous avons eu accès à un jeu de données privé fo
 Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et comprend notamment :
 - La consommation quotidienne de chaque client,
 - Les transactions financières effectuées sur leurs compteurs.
+Shape du DataFrame features : (2716, 24)
+Lignes dans le DataFrame aplati : 6644210
   ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
 
  # Analyse exploratoire des données (EDA)
@@ -40,17 +42,14 @@ Une analyse exploratoire a été menée pour comprendre la structure du jeu de d
 Elle a permis d’étudier la distribution des variables clés (consommation, ampérage, transactions) et d’identifier les corrélations entre les aspects énergétiques et financiers.
 Des visualisations statistiques (histogrammes, scatter plots, heatmaps) ont été utilisées pour détecter les tendances et les valeurs atypiques.
 
-  ![Visualisation](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation.png)
+![Visualisation](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation.png)
   ![visalusation2](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation2.png)
 
-  ## Feature Engineering
-- **Agrégation journalière par foyer** : total et moyenne d’amperage, total et moyenne des dépenses, nombre d’enregistrements.
-- **Profil global par foyer** : moyennes sur la période, nombre de jours observés, ratios (ex : ratio dépense/amperage).
-- **Ajout des métadonnées** : zone, type de maison, nombre de personnes par foyer.
+## 🔹 Modélisation prédictive
+- Algorithmes supervisés : **Random Forest**, **XGBoost**
+- Validation croisée pour assurer la robustesse des résultats
+- Analyse de l’importance des variables explicatives
 
-
-## Préparation pour la modélisation
-- Sélection des features pertinentes.
-- Imputation des valeurs manquantes si nécessaire.
-- **Standardisation** des variables numériques.
-- **Split train/test** stratifié pour conserver la répartition des classes.
+## 🔹 Interprétation et recommandations
+- Typologie de ménages selon leur niveau de consommation
+- Proposition d’axes d’optimisation énergétique et économique
