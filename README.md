@@ -45,11 +45,50 @@ Des visualisations statistiques (histogrammes, scatter plots, heatmaps) ont ét�
 ![Visualisation](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation.png)
   ![visalusation2](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation2.png)
 
-## 🔹 Modélisation prédictive
-- Algorithmes supervisés : **Random Forest**, **XGBoost**
-- Validation croisée pour assurer la robustesse des résultats
-- Analyse de l’importance des variables explicatives
+## Compréhension des Données
 
-## 🔹 Interprétation et recommandations
-- Typologie de ménages selon leur niveau de consommation
-- Proposition d’axes d’optimisation énergétique et économique
+Le jeu de données comprend **2 716 foyers** avec des relevés complets de compteurs intelligents incluant :
+
+- **Données temporelles** : Enregistrements de consommation horodatés sur plusieurs mois
+- **Métriques de consommation** : Relevés d'ampérage, agrégations quotidiennes, coûts énergétiques
+- **Paramètres techniques** : Capacité de tension, force du signal WiFi, version du compteur
+- **Métadonnées des ménages** : Zone géographique, type de maison, nombre de résidents
+- **Historique de transactions** : Enregistrements de paiements (dépôts et retraits)
+
+### Caractéristiques Principales Créées
+
+| Caractéristique | Description | Importance |
+|-----------------|-------------|------------|
+| `avg_amperage_per_day` | Consommation moyenne d'ampérage quotidien | **Maximale** - Prédicteur principal |
+| `avg_depense_per_day` | Dépense énergétique quotidienne moyenne | **Élevée** - Indicateur de coût |
+| `ratio_depense_amperage` | Ratio d'efficacité des coûts | **Moyenne** - Modèle d'utilisation |
+| `jours_observed` | Nombre de jours d'observation | **Moyenne** - Fiabilité des données |
+| `nombre_personnes` | Taille du ménage | **Faible** - Facteur démographique |
+
+La variable cible segmente les foyers en trois classes équilibrées :
+- **Petit** (Petits consommateurs) : ≤33e percentile
+- **Moyen** (Consommateurs moyens) : 33e-66e percentile  
+- **Grand** (Grands consommateurs) : ≥66e percentile
+
+## Modélisation et Évaluation
+
+### Modèles Comparés
+
+Trois algorithmes de classification ont été évalués avec optimisation des hyperparamètres :
+
+1. **Random Forest Classifier** (n_estimators=200, max_depth=10)
+2. **Régression Logistique** (C=100, penalty='l1', solver='liblinear')
+3. **XGBoost Classifier** (learning_rate=0.05, max_depth=6, n_estimators=300)
+
+Tous les modèles utilisent `class_weight='balanced'` pour gérer les légers déséquilibres de classes.
+
+### Résultats de Performance
+
+**Métriques Finales sur l'Ensemble de Test :**
+
+| Modèle | Accuracy | Balanced Accuracy | F1-Score | Précision | Rappel |
+|--------|----------|-------------------|----------|-----------|--------|
+| **XGBoost (Meilleur)** | 99,82% | 99,82% | 99,82% | 99,82% | 99,82% |
+| Random Forest | 99,82% | 99,82% | 99,82% | 99,82% | 99,82% |
+| Régression Logistique | 99,26% | 99,26% | 99,26% | 99,26% | 99,26% |
+![Metriques results](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/download%20(3).png)
