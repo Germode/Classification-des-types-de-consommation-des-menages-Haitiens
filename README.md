@@ -44,12 +44,16 @@ convertir la structure imbriquée (consommations pour chaque foyer) en un tablea
 Shape du DataFrame features : (2716, 24)
 Lignes dans le DataFrame aplati : 6644210
 
-  ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
+  ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/11.png)
 
 
    ## les données JSON brutes en indicateurs numériques exploitables
 ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
 
+## Analyse exploratoire (EDA) : statistiques et visualisations
+Inspecter les distributions, détecter outliers, comprendre relations simples.
+
+![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
 
 ### Caractéristiques Principales Créées
 
