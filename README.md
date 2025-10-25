@@ -88,8 +88,8 @@ Tous les modèles utilisent `class_weight='balanced'` pour gérer les légers d�
 
 | Modèle | Accuracy | Balanced Accuracy | F1-Score | Précision | Rappel |
 |--------|----------|-------------------|----------|-----------|--------|
-| **XGBoost (Meilleur)** | 99,82% | 99,82% | 99,82% | 99,82% | 99,82% |
-| Random Forest | 99,82% | 99,82% | 99,82% | 99,82% | 99,82% |
-| Régression Logistique | 99,26% | 99,26% | 99,26% | 99,26% | 99,26% |
+| **XGBoost (Meilleur)** | 99,63% | 99,63% | 99,63% | 99,63% | 99,63% |
+| Random Forest | 99,82% | 99,82% | 99,81% | 99,82% | 99,82% |
+| Régression Logistique | 91,54% | 91,55% | 91,56% | 91,95% | 91,54% |
 
 ![Metriques results](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/download%20(3).png)
