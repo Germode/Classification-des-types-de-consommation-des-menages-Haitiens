@@ -28,9 +28,6 @@ Dans le cadre de ce projet, nous avons eu accès à un jeu de données privé fo
 Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et comprend notamment :
 - La consommation quotidienne de chaque client,
 - Les transactions financières effectuées sur leurs compteurs.
-Shape du DataFrame features : (2716, 24)
-Lignes dans le DataFrame aplati : 6644210
-  ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
 
 ## Compréhension des Données
 
@@ -41,6 +38,18 @@ Le jeu de données comprend **2 716 foyers** avec des relevés complets de compt
 - **Paramètres techniques** : Capacité de tension, force du signal WiFi, version du compteur
 - **Métadonnées des ménages** : Zone géographique, type de maison, nombre de résidents
 - **Historique de transactions** : Enregistrements de paiements (dépôts et retraits)
+  
+## Aplatir la structure JSON en DataFrame (une ligne = une mesure)
+convertir la structure imbriquée (consommations pour chaque foyer) en un tableau plat exploitable.
+Shape du DataFrame features : (2716, 24)
+Lignes dans le DataFrame aplati : 6644210
+
+  ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
+
+
+   ## les données JSON brutes en indicateurs numériques exploitables
+![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
+
 
 ### Caractéristiques Principales Créées
 
