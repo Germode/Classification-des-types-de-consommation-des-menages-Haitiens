@@ -187,6 +187,6 @@ jupyter notebook "Notebook Final.ipynb"
 
 ---
 
-**Contact du Projet :** 
+**Contact du Projet :** Darlens DAMISCA | Emode ST GERMAIN
 **Dernière Mise à Jour :** Octobre 2025  
 **Licence :** MIT
