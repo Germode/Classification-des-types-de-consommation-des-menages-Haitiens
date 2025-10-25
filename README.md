@@ -93,3 +93,100 @@ Tous les modèles utilisent `class_weight='balanced'` pour gérer les légers d�
 | Régression Logistique | 91,54% | 91,55% | 91,56% | 91,95% | 91,54% |
 
 ![Metriques results](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/download%20(3).png)
+
+### Robustesse du Modèle
+
+La validation croisée à 5 plis confirme la stabilité :
+- XGBoost : 0,9982 ± 0,0012 F1-Score
+- Random Forest : 0,9995 ± 0,0008 F1-Score  
+- Régression Logistique : 0,9885 ± 0,0024 F1-Score
+
+### Analyse des Erreurs
+
+Sur 544 échantillons de test :
+- **XGBoost** : 1 erreur de classification (taux d'erreur 0,18%)
+- **Random Forest** : 1 erreur de classification (taux d'erreur 0,18%)
+- **Régression Logistique** : 4 erreurs de classification (taux d'erreur 0,74%)
+
+Les erreurs se produisent principalement entre classes adjacentes (ex: "moyen" vs "grand"), indiquant que la nature ordinale de la consommation est bien capturée.
+
+## Conclusion
+
+### Recommandations
+
+**Pour les Fournisseurs d'Énergie :**
+1. **Implémenter la segmentation automatique des clients** en utilisant le modèle XGBoost déployé pour classifier les 2 716 foyers avec une fiabilité de 99,8%
+2. **Concevoir des stratégies de tarification échelonnée** adaptées à chaque segment de consommation, améliorant les revenus tout en maintenant l'accessibilité
+3. **Cibler les programmes d'efficacité** sur les "grands" consommateurs (896 foyers identifiés) pour réduire la demande de pointe d'environ 15-20%
+4. **Surveiller les modèles de consommation** mensuellement et réentraîner le modèle trimestriellement pour maintenir la précision à mesure que l'utilisation évolue
+
+**Pour l'Utilisation Opérationnelle :**
+- Déployer le modèle via API pour la classification en temps réel des nouvelles installations de compteurs
+- Générer des alertes automatisées lorsque les foyers transitent entre les paliers de consommation
+- Intégrer les prédictions dans les systèmes de facturation pour l'application dynamique des tarifs
+
+### Déploiement du Modèle
+
+Le modèle XGBoost entraîné, le scaler et les encodeurs sont sauvegardés dans `/sigor_model_artifacts/` et prêts pour le déploiement en production. Le pipeline traite les données brutes du compteur via l'ingénierie de caractéristiques, la mise à l'échelle et la classification en millisecondes par foyer.
+
+### Limitations et Travaux Futurs
+
+- **Fraîcheur des données** : Modèle entraîné sur des données historiques ; la performance peut diminuer avec les changements saisonniers
+- **Expansion des caractéristiques** : Incorporer les données météorologiques et les modèles horaires pourrait améliorer la granularité
+- **Explicabilité** : Implémenter les valeurs SHAP pour une prise de décision transparente dans les communications clients
+- **Scalabilité** : Le modèle actuel gère 2 716 foyers ; évaluer le calcul distribué pour un déploiement national (50 000+ foyers)
+
+## Navigation du Répertoire
+
+```
+Classification-des-types-de-consommation-des-menages-Haitiens/
+│
+├── README.md                          # Ce fichier
+├── Notebook Final.ipynb                    # Notebook d'analyse complet (prêt pour production)
+├── presentation.pdf                   # Diapositives du résumé exécutif
+│
+├── Donnees/
+│   └── sigorahaitimetedatas.json     # Données brutes des compteurs intelligents (2 716 foyers)
+│
+├── models/
+│   ├── best_model.joblib   # Classificateur XGBoost entraîné
+│   ├── scaler.joblib                     # StandardScaler pour les caractéristiques
+│   ├── label_encoder.joblib              # Encodeur ordinal pour les classes
+│   └── performance_metrics.json          # Métriques d'évaluation du modèle
+│
+└── results/
+    └── final_results_YYYYMMDD_HHMM.csv   # Prédictions avec probabilités
+```
+
+### Instructions de Reproduction
+
+**Prérequis :**
+- Python 3.8+
+- Bibliothèques : pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn
+
+**Configuration :**
+```bash
+# Cloner le répertoire
+git clone https://github.com/votreusername/Classification-des-types-de-consommation-des-menages-Haitiens.git
+cd Classification-des-types-de-consommation-des-menages-Haitiens
+
+# Installer les dépendances
+pip install -r requirements.txt
+
+# Exécuter le notebook d'analyse
+jupyter notebook "Notebook Final.ipynb"
+```
+
+**Pour Google Colab :**
+1. Télécharger `sigorahaitimetedatas.json` sur Google Drive
+2. Ouvrir ` Notebook Final.ipynb` dans Colab
+3. Mettre à jour `DATA_PATH` dans la cellule 3 vers votre emplacement Drive
+4. Exécuter toutes les cellules séquentiellement (Runtime > Run all)
+
+**Temps d'exécution attendu :** 15-20 minutes sur matériel standard (inclut l'optimisation GridSearchCV)
+
+---
+
+**Contact du Projet :** 
+**Dernière Mise à Jour :** Octobre 2025  
+**Licence :** MIT
