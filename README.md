@@ -21,10 +21,6 @@ Développer un **modèle d’apprentissage automatique (Machine Learning)** capa
 - Analyser les profils de consommation à partir des données collectées (ampérage, transactions, zones).
 - Extraire et créer des **caractéristiques (features)** pertinentes.
 - Gérer le **déséquilibre des classes** dans les données.
-- Construire et évaluer un modèle fiable pour prédire la catégorie d’un ménage :
-  - **Faible consommation** (< 0.05 kW)
-  - **Moyenne consommation** (0.05–0.5 kW)
-  - **Forte consommation** (> 0.5 kW)
  
  ## Description du jeu de données
 Dans le cadre de ce projet, nous avons eu accès à un jeu de données privé fourni par la société Sigora, contenant des informations détaillées sur les compteurs des clients situés dans plusieurs communes du Nord-Ouest d’Haïti, telles que Môle Saint-Nicolas, Jean Rabel, Bombardopolis et Môle Rouge.
@@ -35,15 +31,6 @@ Ce jeu de données couvre la période de janvier 2023 à septembre 2025 et compr
 Shape du DataFrame features : (2716, 24)
 Lignes dans le DataFrame aplati : 6644210
   ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
-
- # Analyse exploratoire des données (EDA)
-
-Une analyse exploratoire a été menée pour comprendre la structure du jeu de données.
-Elle a permis d’étudier la distribution des variables clés (consommation, ampérage, transactions) et d’identifier les corrélations entre les aspects énergétiques et financiers.
-Des visualisations statistiques (histogrammes, scatter plots, heatmaps) ont été utilisées pour détecter les tendances et les valeurs atypiques.
-
-![Visualisation](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation.png)
-  ![visalusation2](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/visalusation2.png)
 
 ## Compréhension des Données
 
