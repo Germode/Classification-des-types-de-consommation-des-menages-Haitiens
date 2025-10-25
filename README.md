@@ -84,9 +84,9 @@ Tous les modèles utilisent `class_weight='balanced'` pour gérer les légers d�
 ### Robustesse du Modèle
 
 La validation croisée à 5 plis confirme la stabilité :
-- XGBoost : 0,9982 ± 0,0012 F1-Score
-- Random Forest : 0,9995 ± 0,0008 F1-Score  
-- Régression Logistique : 0,9885 ± 0,0024 F1-Score
+- XGBoost : 0,9982 ± 0,0017 F1-Score
+- Random Forest : 0,9995 ± 0,0009 F1-Score  
+- Régression Logistique : 0,9885 ± 0,0063 F1-Score
 
 ### Analyse des Erreurs
 
