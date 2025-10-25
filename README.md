@@ -53,10 +53,13 @@ Lignes dans le DataFrame aplati : 6644210
 ## Analyse exploratoire (EDA) : statistiques et visualisations
 Inspecter les distributions, détecter outliers, comprendre relations simples.
 
+Scatter plot : argent dépensé vs amperage
 ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/t%C3%A9l%C3%A9chargement%20(22).png)
 
+Pairplot pour explorer relations entre variables
 ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/t%C3%A9l%C3%A9chargement%20(23).png)
 
+Ampérage moyen par zone
 ![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/t%C3%A9l%C3%A9chargement%20(24).png)
 
 ### Caractéristiques Principales Créées
