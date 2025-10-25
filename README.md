@@ -15,7 +15,7 @@ Les ménages présentent des profils de consommation très variés, rendant diff
 Grâce à l’exploitation de **données issues de compteurs intelligents (smart meters)**, ce projet propose une approche basée sur **l’intelligence artificielle** pour **analyser, comprendre et classer** les comportements de consommation des foyers haïtiens.
 
 ## 🎯 Objectif du projet
-Développer un **modèle d’apprentissage automatique (Machine Learning)** capable de **classifier automatiquement les ménages haïtiens** selon leur **niveau de consommation énergétique moyenne (en kW)**.
+Nous avons segmenté les foyers en trois catégories (petits, moyens et grands consommateurs) à partir de leur ampérage moyen afin de permettre la classification supervisée et l’analyse des profils énergétiques.
 
 ### 🧩 Objectifs spécifiques
 - Analyser les profils de consommation à partir des données collectées (ampérage, transactions, zones).
