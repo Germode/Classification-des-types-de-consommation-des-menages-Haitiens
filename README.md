@@ -91,4 +91,5 @@ Tous les modèles utilisent `class_weight='balanced'` pour gérer les légers d�
 | **XGBoost (Meilleur)** | 99,82% | 99,82% | 99,82% | 99,82% | 99,82% |
 | Random Forest | 99,82% | 99,82% | 99,82% | 99,82% | 99,82% |
 | Régression Logistique | 99,26% | 99,26% | 99,26% | 99,26% | 99,26% |
+
 ![Metriques results](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/download%20(3).png)
