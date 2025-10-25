@@ -53,7 +53,11 @@ Lignes dans le DataFrame aplati : 6644210
 ## Analyse exploratoire (EDA) : statistiques et visualisations
 Inspecter les distributions, détecter outliers, comprendre relations simples.
 
-![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/Data.png)
+![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/t%C3%A9l%C3%A9chargement%20(22).png)
+
+![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/t%C3%A9l%C3%A9chargement%20(23).png)
+
+![Data](https://github.com/Germode/Classification-des-types-de-consommation-des-menages-Haitiens/blob/main/Images/t%C3%A9l%C3%A9chargement%20(24).png)
 
 ### Caractéristiques Principales Créées
 
